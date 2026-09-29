@@ -1,4 +1,4 @@
-# quanttide-laboratory-of-knowledge-work
+# quanttide-work-lab
 
 量潮知识工作实验室——知识工作实验与原型。单仓：每一版实验室是一个 app。
 
