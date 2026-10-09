@@ -25,7 +25,7 @@ local 是这台机器——文件在哪、进程怎么起、网怎么通、飞�
 ## 落点
 
 ```text
-packages/rust/         core：quanttide-lab-toolkit 的实验版（Rust 库 quanttide-lab）
+packages/rust/         core：quanttide-lab-toolkit 的实验版（Rust 库 quanttide-work-lab）
 ├── Cargo.toml
 ├── src/
 │   ├── lib.rs
@@ -57,7 +57,7 @@ src/cli/               local：命令行（Rust 二进制，path 依赖 packages
 
 local 的件数看着少，是按边界分的结果——边界只有文件、进程、网、飞书加一个入口。按行数它占现行全仓（5226 行）约三成：入口与命令面约 690，文件约 440，进程约 134，网 48，时刻与凭证约 35。core 条目多，是知识工作的模型本来就多。
 
-现在 `packages/rust/` 里只有骨架——`Cargo.toml`（包名 `quanttide-lab`，lib 名 `quanttide_lab`）、`src/lib.rs`、`tests/package.rs`；上面列的模型目录待建，`src/cli` 也还没接上这条 path 依赖。
+现在 `packages/rust/` 里只有骨架——`Cargo.toml`（包名 `quanttide-work-lab`，lib 名 `quanttide_work_lab`）、`src/lib.rs`、`tests/package.rs`；上面列的模型目录待建，`src/cli` 也还没接上这条 path 依赖。包自己那份开发指南（界在哪、验收）在 `packages/rust/docs/dev-guide/index.md`。
 
 时刻与新凭证是进 core 的输入：`clock.rs` 里取此刻的那半、`ids.rs` 里发新凭证的那半在 local；凭证的派生（给定名字按 uuid5 算 id）是纯的，留 core。
 
@@ -102,4 +102,4 @@ local 的件数看着少，是按边界分的结果——边界只有文件、�
 - 飞书模块的接口面：先只做「取材料」，回写（发文档、回消息）等有真需求再接。
 - 两包要不要共一个 Cargo 工作区（根 `Cargo.toml`），还是各留各的锁。
 - studio 那侧要不要共用 core：core 是 Rust、studio 是 Dart，真共用要么各留一份薄的、要么 core 出个跨进程的口子。
-- 包名按工具集的惯例取了 `quanttide-lab`（`quanttide-work-toolkit/packages/rust` 的包名是 `quanttide-work`）；但 `quanttide-lab-toolkit` 这个仓库在量潮的子模块里没找到，将来扶正时的仓库名与归属归你定。
+- 包名照实验室仓取：`packages/rust/` 是 `quanttide-work-lab`，`src/cli/` 是 `quanttide-work-lab-cli`；将来扶正进 `quanttide-lab-toolkit` 时仓库名与归属归你定。

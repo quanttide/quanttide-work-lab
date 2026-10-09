@@ -1,4 +1,4 @@
-use quanttide_lab::{DOMAIN, VERSION};
+use quanttide_work_lab::{DOMAIN, VERSION};
 
 #[test]
 fn version_matches_manifest() {
