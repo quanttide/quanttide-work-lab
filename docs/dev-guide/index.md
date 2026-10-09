@@ -37,11 +37,15 @@ src/
 │   └── outcome.rs error.rs fields.rs executor.rs paths.rs ids.rs sha1.rs
 └── local/           本机：碰边界的都在这一层
     ├── cli.rs       入口：clap 定义与分派
-    ├── cli/         命令树、分派、发射、导览
+    ├── cli/         命令树（commands）、分派（handlers/）、发射（emit）
+    ├── help.rs      导览
     ├── fs.rs fs/    文件：位置装载、读定义、读账、写账、事件落盘
     ├── process.rs   进程：起 pi、跑 run 判据
-    └── http.rs      网：provider 探活
+    ├── http.rs      网：provider 探活
+    └── clock.rs ids.rs  取此刻、发新凭证
 ```
+
+local 的件数看着少，是按边界分的结果——边界只有三条（文件、进程、网）加一个入口。按行数它占现行全仓（5226 行）约三成：入口与命令面约 690，文件约 440（含散在六个聚合里的盘活），进程约 134，网 48，时刻与凭证约 35。core 条目多，是知识工作的模型本来就多。
 
 时刻与新凭证是进 core 的输入。`clock.rs` 里取此刻的那半、`ids.rs` 里发新凭证的那半挪 local；凭证的派生（给定名字按 uuid5 算 id）是纯的，留 core。
 
