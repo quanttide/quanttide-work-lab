@@ -5,7 +5,8 @@
 ## 目录
 
 ```
-src/cli/   命令行实验（Rust）——qtcloud-work 的实验版，包名 quanttide-work-lab-cli
+src/cli/        命令行实验（Rust）——qtcloud-work 的实验版，包名 quanttide-work-lab-cli
+packages/rust/  内核实验（Rust）——quanttide-lab-toolkit 的实验版，包名 quanttide-lab
 ```
 
 ## 许可

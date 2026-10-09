@@ -1,0 +1,15 @@
+[package]
+name = "quanttide-lab"
+version = "0.1.0-alpha.1"
+edition = "2024"
+description = "知识工作内核 Rust 库——quanttide-lab-toolkit 的实验版"
+license = "Apache-2.0"
+repository = "https://github.com/quanttide/quanttide-work-lab"
+readme = "README.md"
+keywords = ["quanttide", "lab", "knowledge-work", "toolkit"]
+categories = ["development-tools"]
+publish = false
+
+[lib]
+name = "quanttide_lab"
+path = "src/lib.rs"
