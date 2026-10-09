@@ -2,6 +2,12 @@
 
 量潮知识工作实验室——知识工作实验与原型。
 
+## 目录
+
+```
+src/cli/   命令行实验（Rust）——qtcloud-work 的实验版，包名 quanttide-work-lab-cli
+```
+
 ## 许可
 
 [CC BY 4.0](LICENSE)

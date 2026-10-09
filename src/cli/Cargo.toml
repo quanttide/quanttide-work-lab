@@ -1,0 +1,19 @@
+[package]
+name = "quanttide-work-lab-cli"
+version = "0.1.0-alpha.1"
+edition = "2024"
+description = "量潮知识工作实验室命令行——qtcloud-work 的实验版"
+authors = ["QuantTide <opensource@quanttide.com>"]
+license = "Apache-2.0"
+repository = "https://github.com/quanttide/quanttide-work-lab"
+readme = "README.md"
+keywords = ["quanttide", "work", "lab", "cli"]
+categories = ["command-line-utilities"]
+publish = false
+
+[[bin]]
+name = "quanttide-work-lab"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
